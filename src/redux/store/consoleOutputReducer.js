@@ -4,8 +4,13 @@ const defaultState={
 
 const Write_inputedCommand="Write_inputedCommand"
 
-
-
+const text='Hello.I`m Ruslan from Ukraine.I`m intrested in web developing(mostly front-end),and want to become a useful worker in your company.I know the modern technologies like a:React.js,Redux,mongoDB,express framework on node.js,Async js.I learning web dev for more than 1year.Dyring 1 year i created social-media app,and 1 static site for testing of css knowlege.Also i studying in colleauge on software engineer for 3 years.I hope,that i will be a grerat part of your company.'
+const text1='Hello.I`m Ruslan from Ukraine.'
+const text2='I`m intrested in web developing(mostly front-end),and want to become a useful worker in your company.'
+const text3='I know the modern technologies like a:React.js,Redux,mongoDB,express framework on node.js,Async js.'
+const text4='I learning web dev for more than 1year.Dyring 1 year i created social-media app,and 1 static site for testing of css knowlege.'
+const text5='Also i studying in colleauge on software engineer for 3 years.'
+const text6='I hope,that i will be a grerat part of your company.'
 
 export const consoleOutputReducer=(state=defaultState,action)=>{
     switch (action.type) {
@@ -13,16 +18,19 @@ export const consoleOutputReducer=(state=defaultState,action)=>{
         return {...state,messages:[...state.messages,action.payload]}
         break;
     case "help":
-        return {...state,messages:[...state.messages,{text:"<pages>(all avaible pages)",isComand:false},{text:"<dir page_name>(check page)",isComand:false}]}
+        return {...state,messages:[...state.messages,{text:"<pages>(all avaible pages)",isComand:false},{text:"<dir page_name>(check page)",isComand:false},{text:"<help>(commands list)",isComand:false},{text:"<clr>(clear console)",isComand:false}]}
         break;
     case "pages":
-        return {...state,messages:[...state.messages,{text:"portfolio_works",isComand:false},{text:"other page",isComand:false}]}
+        return {...state,messages:[...state.messages,{text:"portfolio_works",isComand:false},{text:"aboutMe",isComand:false},{text:"socials",isComand:false}]}
         break;
     case "dir portfolio_works":
         return {...state,messages:[...state.messages,{text:"https://abobasocial.netlify.app (social-media app)",isComand:false},{text:"https://ffuturesenior.github.io/protfSite1 (static site)",isComand:false}]}
         break;
-    case "dir other_page":
-        return {...state,messages:[...state.messages,{text:"nothing there",isComand:false}]}
+    case "dir aboutMe":
+        return {...state,messages:[...state.messages,{text:text1,isComand:false},{text:text2,isComand:false},{text:text3,isComand:false},{text:text4,isComand:false},{text:text5,isComand:false},{text:text6,isComand:false}]}
+        break;
+    case "dir socials":
+        return {...state,messages:[...state.messages,{text:"telegram:@Yo5wiwjt",isComand:false},{text:"gmail:@shamray.ruslan068@gmail.com",isComand:false}]}
         break;
     case "clr":
         return {...state,messages:[{text:"hi there.It`s ffuturesenior portfolio.Input <help> into command line to see avaible commands",isComand:false}]}

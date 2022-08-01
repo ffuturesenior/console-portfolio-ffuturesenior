@@ -49,6 +49,7 @@ input{
   font-size: 18px;
   caret-color: green;
   padding: 0px 10px;
+  width: 100%;
 }
 
 p,span,a{
