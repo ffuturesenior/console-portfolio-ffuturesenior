@@ -1,3 +1,5 @@
+
+
 const defaultState={
     messages:[{text:"hi there.It`s ffuturesenior portfolio.Input <help> into command line to see avaible commands",isComand:false}]
 }
@@ -18,7 +20,7 @@ export const consoleOutputReducer=(state=defaultState,action)=>{
         return {...state,messages:[...state.messages,action.payload]}
         break;
     case "help":
-        return {...state,messages:[...state.messages,{text:"<pages>(all avaible pages)",isComand:false},{text:"<dir page_name>(check page)",isComand:false},{text:"<help>(commands list)",isComand:false},{text:"<clr>(clear console)",isComand:false}]}
+        return {...state,messages:[...state.messages,{text:"<pages>(all avaible pages)",isComand:false},{text:"<dir <page_name>>(check page)",isComand:false},{text:"<help>(commands list)",isComand:false},{text:"<clr>(clear console)",isComand:false},{text:"<how to get>(recieve instruction,how to get data from server)",isComand:false}]}
         break;
     case "pages":
         return {...state,messages:[...state.messages,{text:"portfolio_works",isComand:false},{text:"aboutMe",isComand:false},{text:"socials",isComand:false}]}
@@ -32,6 +34,15 @@ export const consoleOutputReducer=(state=defaultState,action)=>{
     case "dir socials":
         return {...state,messages:[...state.messages,{text:"telegram:@Yo5wiwjt",isComand:false},{text:"gmail:@shamray.ruslan068@gmail.com",isComand:false}]}
         break;
+    case "how to get":
+        return {...state,messages:[...state.messages,{text:"1st step: input 'get' to console to activate special input for link",isComand:false},{text:"2nd step: input link to recieve data by this link from server",isComand:false}]}
+        break;
+    case 'output_res':
+        return{...state,messages:[...state.messages,{text:action.payload,isComand:false}]}
+        break;
+    case 'res_err':
+        return{...state,messages:[...state.messages,{text:'err',isComand:false}]}
+        break;
     case "clr":
         return {...state,messages:[{text:"hi there.It`s ffuturesenior portfolio.Input <help> into command line to see avaible commands",isComand:false}]}
         break;
@@ -43,3 +54,4 @@ export const consoleOutputReducer=(state=defaultState,action)=>{
 
 export const WriteInputedCommand=(payload)=>({type:Write_inputedCommand,payload})
 export const activateAnyComand=(payload)=>({type:payload})
+export const OutputRes=(payload)=>({type:'output_res',payload})
