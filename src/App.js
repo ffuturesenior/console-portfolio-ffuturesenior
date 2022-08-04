@@ -16,6 +16,8 @@ function App() {
     if(e.key=='Enter'){
       if(actionType=='get'){
         dispatch(activateToggleCommand(actionType))
+        setActionType('')
+        setGetLink('')
       }
       dispatch(WriteInputedCommand({text:actionType,isComand:true}))
       dispatch(activateAnyComand(actionType))
