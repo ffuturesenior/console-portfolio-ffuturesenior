@@ -35,7 +35,7 @@ export const consoleOutputReducer=(state=defaultState,action)=>{
         return {...state,messages:[...state.messages,{text:"telegram:@Yo5wiwjt",isComand:false},{text:"gmail:@shamray.ruslan068@gmail.com",isComand:false}]}
         break;
     case "how to get":
-        return {...state,messages:[...state.messages,{text:"1st step: input 'get' to console to activate special input field for link",isComand:false},{text:"2nd step: input link to recieve data by this link from server",isComand:false},{text:"please,input links ONLY from public servers!",isComand:false},{text:"Links from browser pages doesnt working",isComand:false}]}
+        return {...state,messages:[...state.messages,{text:"1st step: input 'get' to console to activate special input field for link",isComand:false},{text:"2nd step: input link to recieve data by this link from server",isComand:false},{text:"please,input links ONLY from public servers!",isComand:false},{text:"Links from browser pages doesnt working",isComand:false},{text:"For example,use:https://jsonplaceholder.typicode.com/users",isComand:false}]}
         break;
     case 'output_res':
         return{...state,messages:[...state.messages,{text:action.payload,isComand:false}]}
