@@ -4,7 +4,7 @@ const defaultState={
     messages:[{text:"hi there.It`s ffuturesenior portfolio.Input <help> into command line to see avaible commands",isComand:false}]
 }
 
-const Write_inputedCommand="Write_inputedCommand"
+const Write_inputedCommand="write_inputedCommand"
 
 const text='Hello.I`m Ruslan from Ukraine.I`m intrested in web developing(mostly front-end),and want to become a useful worker in your company.I know the modern technologies like a:React.js,Redux,mongoDB,express framework on node.js,Async js.I learning web dev for more than 1year.Dyring 1 year i created social-media app,and 1 static site for testing of css knowlege.Also i studying in colleauge on software engineer for 3 years.I hope,that i will be a grerat part of your company.'
 const text1='Hello.I`m Ruslan from Ukraine.'
@@ -16,7 +16,7 @@ const text6='I hope,that i will be a grerat part of your company.'
 
 export const consoleOutputReducer=(state=defaultState,action)=>{
     switch (action.type) {
-    case "Write_inputedCommand":
+    case "write_inputedCommand":
         return {...state,messages:[...state.messages,action.payload]}
         break;
     case "help":

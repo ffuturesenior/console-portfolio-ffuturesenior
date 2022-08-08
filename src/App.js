@@ -15,12 +15,12 @@ function App() {
   function completeAction(e){
     if(e.key=='Enter'){
       if(actionType=='get'){
-        dispatch(activateToggleCommand(actionType))
+        dispatch(activateToggleCommand(actionType.toLowerCase().trim()))
         setActionType('')
         setGetLink('')
       }
       dispatch(WriteInputedCommand({text:actionType,isComand:true}))
-      dispatch(activateAnyComand(actionType))
+      dispatch(activateAnyComand(actionType.toLowerCase().trim()))
       setActionType('')
     }
     //setActionType('')
