@@ -26,7 +26,7 @@ export const consoleOutputReducer=(state=defaultState,action)=>{
         return {...state,messages:[...state.messages,{text:"portfolio_works",isComand:false},{text:"aboutMe",isComand:false},{text:"socials",isComand:false}]}
         break;
     case "dir portfolio_works":
-        return {...state,messages:[...state.messages,{text:"https://abobasocial.netlify.app (social-media app)",isComand:false},{text:"https://ffuturesenior.github.io/protfSite1 (static site)",isComand:false}]}
+        return {...state,messages:[...state.messages,{text:"https://abobasocial.netlify.app (social-media app)",isComand:false},{text:"https://ffuturesenior.github.io/protfSite1 (static site)",isComand:false},{text:"https://ffuturesenior-shop.netlify.app (shop+sell statistic)",isComand:false}]}
         break;
     case "dir aboutMe":
         return {...state,messages:[...state.messages,{text:text1,isComand:false},{text:text2,isComand:false},{text:text3,isComand:false},{text:text4,isComand:false},{text:text5,isComand:false},{text:text6,isComand:false}]}
