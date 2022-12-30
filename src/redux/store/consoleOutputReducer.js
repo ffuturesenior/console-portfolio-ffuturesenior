@@ -6,13 +6,31 @@ const defaultState={
 
 const Write_inputedCommand="write_inputedCommand"
 
-const text='Hello.I`m Ruslan from Ukraine.I`m intrested in web developing(mostly front-end),and want to become a useful worker in your company.I know the modern technologies like a:React.js,Redux,mongoDB,express framework on node.js,Async js.I learning web dev for more than 1year.Dyring 1 year i created social-media app,and 1 static site for testing of css knowlege.Also i studying in colleauge on software engineer for 3 years.I hope,that i will be a grerat part of your company.'
-const text1='Hello.I`m Ruslan from Ukraine.'
+
+const text1='Hello.I`m nameless creature from Ukraine.'
 const text2='I`m intrested in web developing(mostly front-end),and want to become a useful worker in your company.'
 const text3='I know the modern technologies like a:React.js,Redux,mongoDB,express framework on node.js,Async js.'
-const text4='I learning web dev for more than 1year.Dyring 1 year i created social-media app,and 1 static site for testing of css knowlege.'
+const text4='I learning web dev for more than 1year.During 1 year i created social-media app,and 1 static site for testing of css knowlege.'
 const text5='Also i studying in colleauge on software engineer for 3 years.'
 const text6='I hope,that i will be a grerat part of your company.'
+
+
+const forSocial=[
+    {text:"(social-media app) front-----> https://github.com/ffuturesenior/abobasocial",isComand:false},
+    {text:"(social-media app) back-----> https://github.com/ffuturesenior/abobasocial-back",isComand:false},
+    {text:"(social-media app) socket-----> https://github.com/ffuturesenior/abobasocial-socket",isComand:false},
+    {text:"____________________________________________________________________________________",isComand:false},
+    ]
+const forShop=[
+    {text:"(shop+sell statistic) front-----> https://github.com/ffuturesenior/ffuturesenior-shop",isComand:false},
+    {text:"(shop+sell statistic) back-----> https://github.com/ffuturesenior/shop-backend",isComand:false},
+    {text:"____________________________________________________________________________________",isComand:false},
+]
+
+const forStaticSite=[
+    {text:"(static site)-----> https://ffuturesenior.github.io/protfSite1",isComand:false},
+    {text:"____________________________________________________________________________________",isComand:false},
+]
 
 export const consoleOutputReducer=(state=defaultState,action)=>{
     switch (action.type) {
@@ -26,7 +44,7 @@ export const consoleOutputReducer=(state=defaultState,action)=>{
         return {...state,messages:[...state.messages,{text:"portfolio_works",isComand:false},{text:"aboutMe",isComand:false},{text:"socials",isComand:false}]}
         break;
     case "dir portfolio_works":
-        return {...state,messages:[...state.messages,{text:"https://abobasocial.netlify.app (social-media app)",isComand:false},{text:"https://ffuturesenior.github.io/protfSite1 (static site)",isComand:false},{text:"https://ffuturesenior-shop.netlify.app (shop+sell statistic)",isComand:false}]}
+        return {...state,messages:[...state.messages,...forStaticSite,...forShop,...forSocial]}
         break;
     case "dir aboutMe":
         return {...state,messages:[...state.messages,{text:text1,isComand:false},{text:text2,isComand:false},{text:text3,isComand:false},{text:text4,isComand:false},{text:text5,isComand:false},{text:text6,isComand:false}]}
