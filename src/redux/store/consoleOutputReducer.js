@@ -13,8 +13,8 @@ const text3='I know the modern technologies like a:React.js,Redux,mongoDB,expres
 const text4='I learning web dev for more than 1year.During 1 year i created social-media app,and 1 static site for testing of css knowlege.'
 const text5='Also i studying in colleauge on software engineer for 3 years.'
 const text6='I hope,that i will be a grerat part of your company.'
-
-
+const text7='gitHub: https://github.com/ffuturesenior'
+const tg='tg: @Yo5wiwjt'
 const forSocial=[
     {text:"(social-media app) front-----> https://github.com/ffuturesenior/abobasocial",isComand:false},
     {text:"(social-media app) back-----> https://github.com/ffuturesenior/abobasocial-back",isComand:false},
