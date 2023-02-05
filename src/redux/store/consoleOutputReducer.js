@@ -17,11 +17,9 @@ const text7='gitHub: https://github.com/ffuturesenior'
 const tg='tg: @Yo5wiwjt'
 const forSocial=[
     {text:"(social-media app) front-----> https://github.com/ffuturesenior/abobasocial",isComand:false},
-    {text:"____________________________________________________________________________________",isComand:false},
     ]
 const forShop=[
-    {text:"(shop+sell statistic) front-----> https://github.com/ffuturesenior/ffuturesenior-shop",isComand:false},
-    {text:"(shop+sell statistic) back-----> https://github.com/ffuturesenior/shop-backend",isComand:false},
+    {text:"(shop+sell statistic) code-----> https://github.com/ffuturesenior/shop",isComand:false},
     {text:"____________________________________________________________________________________",isComand:false},
 ]
 
