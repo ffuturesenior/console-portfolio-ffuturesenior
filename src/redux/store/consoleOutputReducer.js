@@ -28,6 +28,13 @@ const forStaticSite=[
     {text:"____________________________________________________________________________________",isComand:false},
 ]
 
+const forCalendar=[
+    {text:"(todo-calendar)-----> https://ffuturesenior-calendar-zutand-ts.netlify.app/",isComand:false},
+    {text:"____________________________________________________________________________________",isComand:false},
+]
+
+
+
 export const consoleOutputReducer=(state=defaultState,action)=>{
     switch (action.type) {
     case "write_inputedCommand":
@@ -40,7 +47,7 @@ export const consoleOutputReducer=(state=defaultState,action)=>{
         return {...state,messages:[...state.messages,{text:"portfolio_works",isComand:false},{text:"aboutme",isComand:false},{text:"socials",isComand:false}]}
         break;
     case "dir portfolio_works":
-        return {...state,messages:[...state.messages,...forStaticSite,...forShop,...forSocial]}
+        return {...state,messages:[...state.messages,...forStaticSite,...forShop,...forSocial,...forCalendar]}
         break;
     case "dir aboutme":
         
